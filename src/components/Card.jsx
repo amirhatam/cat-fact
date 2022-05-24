@@ -7,11 +7,9 @@ const Card = (props) => {
     return (
         <MDBContainer>
             <MDBRow>
-                <MDBCardTitle className='text-center my-md-5 my-4 display-5'>The Cats</MDBCardTitle>
 
                 {
-                    props.cats.map((e, i) => {
-                        console.log(e);
+                    props.catsList.map((e, i) => {
                         return (
                             <MDBCardGroup key={i} className='col-md-4 col-9 my-4'>
                                 <MDBCard>
