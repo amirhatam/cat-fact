@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Header from '../components/Header';
 
 
-export default function Main() {
+export default function HomePage() {
     const [cats, setCats] = useState([])
 
     useEffect(() => {
@@ -22,9 +23,10 @@ export default function Main() {
 
     console.log(cats);
 
+
     return (
         <div>
-
+            <Header />
         </div>
     )
 }

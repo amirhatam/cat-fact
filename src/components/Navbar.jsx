@@ -16,7 +16,7 @@ export default function NavbarPage() {
 
   return (
     <MDBNavbar expand='lg' dark bgColor='dark'>
-      <MDBContainer fluid>
+      <MDBContainer >
         <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
         <MDBNavbarToggler
           type='button'
