@@ -4,7 +4,6 @@ import { MDBBtn, MDBCard, MDBCardBody, MDBCardGroup, MDBCardImage, MDBCardText, 
 
 const Card = (props) => {
 
-
     return (
         <MDBContainer>
             <MDBRow>
