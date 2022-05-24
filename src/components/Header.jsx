@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <div
             className='p-5 text-center bg-image'
-            style={{ backgroundImage: "url('https://mdbootstrap.com/img/Photos/Others/img%20(51).webp')", height: 600 }}
+            style={{ backgroundImage: "url('https://browsecat.net/sites/default/files/wildcat-wallpapers-45343-22768-1435901.png')", height: 600 }}
         >
             <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
                 <div className='d-flex justify-content-center align-items-center h-100'>

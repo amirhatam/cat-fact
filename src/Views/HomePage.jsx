@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Header from '../components/Header';
+import Card from '../components/Card';
 
 
 export default function HomePage() {
@@ -21,12 +22,13 @@ export default function HomePage() {
         })();
     }, [])
 
-    console.log(cats);
+    // console.log(cats);
 
 
     return (
         <div>
             <Header />
+            <Card cats={cats} />
         </div>
     )
 }
