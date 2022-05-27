@@ -4,11 +4,13 @@ import { CatFact } from "../utils/CatFact";
 
 const Card = (props) => {
 
-    const handleMouseEnter = (event) => {
+    const handleMouseEnter = () => {
         const getFact = CatFact({ setFact: props.setFact })
 
     }
-    const handleMouseLeave = (event) => {
+
+
+    const handleMouseLeave = () => {
         props.setFact([])
     }
 
@@ -67,7 +69,6 @@ const Card = (props) => {
                         )
                     })
                 }
-
             </MDBRow>
         </MDBContainer >
 
