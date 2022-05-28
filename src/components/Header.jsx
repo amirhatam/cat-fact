@@ -6,8 +6,6 @@ import catVid from '../assets/cat.mp4'
 
 export default function Header() {
     return (
-
-
         <div
             className='text-center bg-image bg-dark'
         >
@@ -23,16 +21,12 @@ export default function Header() {
             <div className='mask' >
                 <div className='d-flex justify-content-center align-items-center h-50'>
                     <div className='text-white'>
-                        <MDBCardTitle className='text-center my-md-5 my-4 display-3'>THE CATS</MDBCardTitle>
-                        <h5>List of Cat Breeds</h5>
+                        <MDBCardTitle className='titleH text-center my-md-5 my-4 display-1'>The Cats</MDBCardTitle>
+                        <h3 className='titleH display-7'>List of Cat Breeds</h3>
                         <br />
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
     )
 }

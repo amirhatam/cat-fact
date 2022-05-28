@@ -15,7 +15,7 @@ const Card = (props) => {
     }
 
     return (
-        <MDBContainer>
+        <MDBContainer className="py-lg-5">
             <MDBRow>
                 {
                     props.catsList.map((e, i) => {
