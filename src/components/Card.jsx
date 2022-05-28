@@ -40,7 +40,7 @@ const Card = (props) => {
                                             {
                                                 e.breed
                                                     ?
-                                                    <div className="py-3 block-example border-bottom border-gray">
+                                                    <div className="py-3">
                                                         <MDBCardTitle className="font-weight-light mb-2">
                                                             Breed
                                                         </MDBCardTitle>
@@ -54,7 +54,7 @@ const Card = (props) => {
                                             {
                                                 e.coat
                                                     ?
-                                                    <div className="py-3 block-example border-bottom border-gray">
+                                                    <div className="py-3 block-example border-top border-gray">
 
                                                         <MDBCardText className="font-weight-light">
                                                             Coat
@@ -67,7 +67,7 @@ const Card = (props) => {
                                             {
                                                 e.country
                                                     ?
-                                                    <div className="py-3 block-example border-bottom border-gray">
+                                                    <div className="py-3 block-example border-top border-gray">
                                                         <MDBCardText className="font-weight-light">
                                                             Country
                                                         </MDBCardText>
@@ -79,7 +79,7 @@ const Card = (props) => {
                                             {
                                                 e.origin
                                                     ?
-                                                    <div className="py-3 block-example border-bottom border-gray">
+                                                    <div className="py-3 block-example border-top border-gray">
                                                         <MDBCardText className="font-weight-light">
                                                             Origin
                                                         </MDBCardText>
@@ -91,7 +91,7 @@ const Card = (props) => {
                                             {
                                                 e.pattern
                                                     ?
-                                                    <div className="py-3">
+                                                    <div className="py-3 block-example border-top border-gray">
                                                         <MDBCardText className="font-weight-light">
                                                             Pattern
                                                         </MDBCardText>
