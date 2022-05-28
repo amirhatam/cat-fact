@@ -38,71 +38,83 @@ const Card = (props) => {
                                                     <div className="spinner-border" role="status" />
                                             }
                                         >
-                                            <MDBCardBody className="text-white">
-
-                                                {
-                                                    e.breed
-                                                        ?
+                                            <MDBCardBody className="text-white text-center">
+                                                <MDBRow>
+                                                    <div className="col-6">
                                                         <div className="py-3">
-                                                            <MDBCardTitle className="font-weight-light mb-2">
+                                                            <MDBCardText className="font-weight-bold">
                                                                 Breed
-                                                            </MDBCardTitle>
-                                                            <MDBCardText className="font-weight-bold px-2">{e.breed}</MDBCardText>
+                                                            </MDBCardText>
+                                                            {
+                                                                e.breed
+                                                                    ?
+                                                                    <MDBCardText className="font-weight-light mb-0">{e.breed}</MDBCardText>
+                                                                    :
+                                                                    <MDBCardText className="font-weight-light mb-0">Not Found !</MDBCardText>
+                                                            }
                                                         </div>
-                                                        :
-                                                        null
+                                                    </div>
 
-                                                }
-
-                                                {
-                                                    e.coat
-                                                        ?
-                                                        <div className="py-3 block-example border-top border-gray">
-
-                                                            <MDBCardText className="font-weight-light">
+                                                    <div className="col-6">
+                                                        <div className="py-3">
+                                                            <MDBCardText className="font-weight-bold">
                                                                 Coat
                                                             </MDBCardText>
-                                                            <MDBCardText className="font-weight-bold px-2">{e.coat}</MDBCardText>
+                                                            {
+                                                                e.coat
+                                                                    ?
+                                                                    <MDBCardText className="font-weight-light mb-0">{e.coat}</MDBCardText>
+                                                                    :
+                                                                    <MDBCardText className="font-weight-light mb-0">Not Found !</MDBCardText>
+                                                            }
                                                         </div>
-                                                        :
-                                                        null
-                                                }
-                                                {
-                                                    e.country
-                                                        ?
-                                                        <div className="py-3 block-example border-top border-gray">
-                                                            <MDBCardText className="font-weight-light">
-                                                                Country
-                                                            </MDBCardText>
-                                                            <MDBCardText className="font-weight-bold px-2">{e.country}</MDBCardText>
-                                                        </div>
-                                                        :
-                                                        null
-                                                }
-                                                {
-                                                    e.origin
-                                                        ?
-                                                        <div className="py-3 block-example border-top border-gray">
-                                                            <MDBCardText className="font-weight-light">
+                                                    </div>
+                                                </MDBRow>
+                                                <MDBRow>
+                                                    <div className="col-6">
+                                                        <div className="py-3  block-example border-top border-gray">
+                                                            <MDBCardText className="font-weight-bold">
                                                                 Origin
                                                             </MDBCardText>
-                                                            <MDBCardText className="font-weight-bold px-2">{e.origin}</MDBCardText>
+                                                            {
+                                                                e.origin
+                                                                    ?
+                                                                    <MDBCardText className="font-weight-light mb-0">{e.origin}</MDBCardText>
+                                                                    :
+                                                                    <MDBCardText className="font-weight-light mb-0">Not Found !</MDBCardText>
+                                                            }
                                                         </div>
-                                                        :
-                                                        null
-                                                }
-                                                {
-                                                    e.pattern
-                                                        ?
-                                                        <div className="py-3 block-example border-top border-gray">
-                                                            <MDBCardText className="font-weight-light">
+                                                    </div>
+
+                                                    <div className="col-6">
+                                                        <div className="py-3  block-example border-top border-gray">
+                                                            <MDBCardText className="font-weight-bold">
                                                                 Pattern
                                                             </MDBCardText>
-                                                            <MDBCardText className="font-weight-bold px-2">{e.pattern}</MDBCardText>
+                                                            {
+                                                                e.pattern
+                                                                    ?
+                                                                    <MDBCardText className="font-weight-light mb-0">{e.pattern}</MDBCardText>
+                                                                    :
+                                                                    <MDBCardText className="font-weight-light mb-0">Not Found !</MDBCardText>
+                                                            }
                                                         </div>
-                                                        :
-                                                        null
-                                                }
+
+                                                    </div>
+                                                </MDBRow>
+                                                <div className="py-3 text-center block-example border-top border-gray">
+                                                    <MDBCardText className="font-weight-bold">
+                                                        Country
+                                                    </MDBCardText>
+
+                                                    {
+                                                        e.country
+                                                            ?
+                                                            <MDBCardText className="font-weight-light mb-0">{e.country}</MDBCardText>
+                                                            :
+                                                            <MDBCardText className="font-weight-light mb-0">Not Found !</MDBCardText>
+                                                    }
+                                                </div>
                                             </MDBCardBody>
                                         </MDBTooltip>
                                     </MDBCard>
