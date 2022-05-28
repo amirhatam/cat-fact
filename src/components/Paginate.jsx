@@ -34,7 +34,7 @@ export default function Paginate(props) {
 
 
     return (
-        <div className='col-12 mb-5'>
+        <div className='col-12'>
             <ReactPaginate
                 previousLabel={"Previous"}
                 nextLabel={"Next"}
