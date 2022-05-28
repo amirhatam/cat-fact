@@ -4,16 +4,14 @@ import { CatFact } from "../utils/CatFact";
 
 const Card = (props) => {
 
+
     const handleMouseEnter = () => {
         const getFact = CatFact({ setFact: props.setFact })
-
     }
-
 
     const handleMouseLeave = () => {
         props.setFact([])
     }
-
 
     return (
         <MDBContainer>
@@ -22,7 +20,7 @@ const Card = (props) => {
                     props.catsList.map((e, i) => {
                         return (
                             <MDBCardGroup key={i} className='col-md-3 col-9 my-4'>
-                                <MDBCard>
+                                <MDBCard background={props.boxColor[i]}>
                                     <MDBTooltip
                                         tag='a'
                                         onMouseEnter={handleMouseEnter}
@@ -34,9 +32,8 @@ const Card = (props) => {
                                                 :
                                                 <div className="spinner-border" role="status" />
                                         }
-
                                     >
-                                        <MDBCardBody className="">
+                                        <MDBCardBody className="text-white">
                                             <MDBCardTitle className="font-weight-light mt-3 mb-2">
                                                 Breed
                                             </MDBCardTitle>
