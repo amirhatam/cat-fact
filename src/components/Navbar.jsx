@@ -31,7 +31,7 @@ export default function NavbarPage() {
         <MDBCollapse show={showNavColorSecond} navbar id='navbarColor02'>
           <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
             <MDBNavbarItem className='active'>
-              <MDBNavbarLink aria-current='page' href='#'>
+              <MDBNavbarLink aria-current='page' href='/'>
                 Home
               </MDBNavbarLink>
             </MDBNavbarItem>
@@ -39,7 +39,7 @@ export default function NavbarPage() {
               <MDBNavbarLink href='#'>Features</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>About</MDBNavbarLink>
+              <MDBNavbarLink href='/contact'>Contact</MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Header from '../components/Header';
 import Card from '../components/Card';
 import Paginate from '../components/Paginate';
-import { MDBCardTitle } from 'mdb-react-ui-kit';
 import { ListOfBreeds } from '../utils/ListOfBreeds';
 import { randomColor } from '../utils/BoxColor';
 

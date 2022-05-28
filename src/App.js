@@ -1,18 +1,28 @@
-import { } from 'mdb-react-ui-kit';
 import React from 'react';
-import Main from './Views/HomePage';
+import { } from 'mdb-react-ui-kit';
+import {
+  BrowserRouter, Route, Routes,
+} from "react-router-dom";
+
+import Home from './Views/HomePage';
 import NavbarPage from './components/Navbar';
 import { Footer } from './components/Footer';
+import ContactPage from './Views/ContactPage';
 
 
 
 function App() {
   return (
-    <section >
+    <BrowserRouter >
       <NavbarPage />
-      <Main />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/contact" exact element={<ContactPage />} />
+
+
+      </Routes>
       <Footer />
-    </section>
+    </BrowserRouter>
   );
 }
 
