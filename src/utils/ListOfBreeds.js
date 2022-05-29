@@ -2,15 +2,25 @@ const axios = require('axios')
 
 export const ListOfBreeds = async (props) => {
     try {
-        const response = await axios.get("https://catfact.ninja/breeds?page=1")
-        const data = response.data
+        //Home page 
+        const resCatApi = await axios.get("https://api.thecatapi.com/v1/breeds?limit=10&page=0")
+        const dataCatApi = resCatApi.data
 
-        if (response.status === 200) {
+        if (resCatApi.status === 200) {
+            props.setCatsList(dataCatApi)
 
-            props.setData(data)
-            props.setCatsList(data.data)
-            props.setTotalPage(data.last_page);
         }
+
+        //More Breeds page
+        const resCatFact = await axios.get("https://catfact.ninja/breeds?page=1")
+        const dataCatFact = resCatFact.data
+
+        if (resCatFact.status === 200) {
+            props.setData(dataCatFact)
+            props.setMoreCatsList(dataCatFact.data)
+            props.setTotalPage(dataCatFact.last_page);
+        }
+
 
     } catch (error) {
         console.error(error)

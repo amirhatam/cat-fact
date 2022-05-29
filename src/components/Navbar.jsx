@@ -17,7 +17,7 @@ export default function NavbarPage() {
   return (
     <MDBNavbar expand='lg' dark bgColor='dark'>
       <MDBContainer >
-        <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
+        <MDBNavbarBrand >Cat Breeds</MDBNavbarBrand>
         <MDBNavbarToggler
           type='button'
           data-target='#navbarColor02'
@@ -34,6 +34,9 @@ export default function NavbarPage() {
               <MDBNavbarLink aria-current='page' href='/'>
                 Home
               </MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='/more-breeds'>More Breeds</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink href='#'>Features</MDBNavbarLink>

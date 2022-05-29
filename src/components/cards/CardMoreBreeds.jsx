@@ -1,10 +1,10 @@
 import React from "react";
-import { MDBCard, MDBCardBody, MDBCardGroup, MDBCardText, MDBCardTitle, MDBContainer, MDBRow, MDBTooltip } from 'mdb-react-ui-kit'
-import { CatFact } from "../utils/CatFact";
-import '../assets/styles/CardStyles.css'
-import SpinnerPage from "./SpinerPage";
+import { MDBCard, MDBCardBody, MDBCardGroup, MDBCardText, MDBContainer, MDBRow, MDBTooltip } from 'mdb-react-ui-kit'
+import { CatFact } from "../../utils/CatFact";
+import '../../assets/styles/CardStyles.css'
+import SpinnerPage from "../SpinerPage";
 
-const Card = (props) => {
+const CardMoreBreeds = (props) => {
 
 
     const handleMouseEnter = () => {
@@ -19,9 +19,9 @@ const Card = (props) => {
         <MDBContainer className="py-lg-5">
             <MDBRow>
                 {
-                    props.catsList != 0
+                    props.moreCatsList != 0
                         ?
-                        props.catsList.map((e, i) => {
+                        props.moreCatsList.map((e, i) => {
                             return (
                                 <MDBCardGroup key={i} className='col-md-4 col-9 my-4'>
                                     <MDBCard background={props.boxColor[i]}>
@@ -130,4 +130,4 @@ const Card = (props) => {
     );
 }
 
-export default Card;
+export default CardMoreBreeds;
