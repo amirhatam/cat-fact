@@ -23,7 +23,9 @@ export const Footer = () => {
                 <a className="text-blue" target="_blank" href="https://github.com/amirhatam/loisir"> Source Code</a>
             </div>
             <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                © Mai 2022 : Cat Facts API
+                © Mai 2022 :
+                <span className='px-2'>TheCatApi.com</span> &
+                <span className='px-2'>CatFact.ninja</span>
             </div>
 
 

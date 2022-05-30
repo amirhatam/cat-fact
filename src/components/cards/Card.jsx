@@ -18,7 +18,6 @@ const Card = (props) => {
     const handleMouseLeave = () => {
         props.setFact([])
     }
-    // console.log(props.catsList);
 
     return (
         <MDBContainer className="py-lg-5">
@@ -28,7 +27,7 @@ const Card = (props) => {
                         ?
                         props.catsList.map((e, i) => {
                             return (
-                                <MDBCardGroup key={i} className='col-md-8 col-9 my-5'>
+                                <MDBCardGroup key={i} className='col-md-8 col-11 my-5'>
                                     <MDBCard background={props.boxColor[i]}>
                                         <MDBRow style={{ cursor: "pointer" }}>
                                             <div className='col-12 bg-image hover-overlay'>
@@ -79,54 +78,46 @@ const Card = (props) => {
 
                                         <MDBCardBody className="text-white text-center">
                                             <MDBRow>
-                                                <div className="col-6">
-                                                    <div className="py-3">
-                                                        <MDBCardText className="font-weight-bold">
-                                                            Breed
-                                                        </MDBCardText>
-                                                        <MDBCardText className="font-weight-light py-3 mb-0">{e.name}</MDBCardText>
-                                                    </div>
+                                                <div className="col-4 mb-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
+                                                        Breed
+                                                    </MDBCardText>
+                                                    <MDBCardText className="font-weight-light">{e.name}</MDBCardText>
                                                 </div>
 
-                                                <div className="col-6">
-                                                    <div className="py-3">
-                                                        <MDBCardText className="font-weight-bold">
-                                                            Origin
-                                                        </MDBCardText>
-                                                        <MDBCardText className="font-weight-light py-3 mb-0">{e.origin}</MDBCardText>
-                                                    </div>
+                                                <div className="col-4 mb-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
+                                                        Origin
+                                                    </MDBCardText>
+                                                    <MDBCardText className="font-weight-light">{e.origin}</MDBCardText>
+                                                </div>
+                                                <div className="col-4 mb-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
+                                                        Life Span
+                                                    </MDBCardText>
+                                                    <MDBCardText className="font-weight-light">{e.life_span}</MDBCardText>
                                                 </div>
                                             </MDBRow>
                                             <MDBRow>
-                                                <div className="col-6">
-                                                    <div className="py-3 block-example border-top border-gray">
-                                                        <MDBCardText className="py-3 font-weight-bold">
-                                                            Temperament
-                                                        </MDBCardText>
-                                                        <MDBCardText className="py-3 font-weight-light mb-0">{e.temperament}</MDBCardText>
-                                                    </div>
+                                                <div className="col-12 py-3 block-example border-top border-gray">
+                                                    <MDBCardText className="font-weight-bold">
+                                                        Temperament
+                                                    </MDBCardText>
+                                                    <MDBCardText className="font-weight-light">{e.temperament}</MDBCardText>
                                                 </div>
-                                                <div className="col-6">
-                                                    <div className="py-3 block-example border-top border-gray">
-                                                        <MDBCardText className="py-3 font-weight-bold">
-                                                            Life Span
-                                                        </MDBCardText>
-                                                        <MDBCardText className="py-3 font-weight-light mb-0">{e.life_span}</MDBCardText>
-                                                    </div>
+                                            </MDBRow>
+                                            <MDBRow>
+                                                <div className="col-12 py-3 text-center block-example border-top border-bottom border-gray">
+                                                    <MDBCardText className="font-weight-bold">
+                                                        Description
+                                                    </MDBCardText>
+                                                    <MDBCardText className="font-weight-light">{e.description}</MDBCardText>
                                                 </div>
                                             </MDBRow>
 
-
-                                            <div className="py-3 text-center block-example border-top border-bottom border-gray">
-                                                <MDBCardText className="py-3 font-weight-bold">
-                                                    Description
-                                                </MDBCardText>
-                                                <MDBCardText className="py-3 font-weight-light mb-0">{e.description}</MDBCardText>
-                                            </div>
-
-                                            <MDBRow>
-                                                <MDBCol className="col-md-4 col-6 py-3">
-                                                    <MDBCardText className="py-3 font-weight-bold">
+                                            <MDBRow className="justify-content-center">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Adaptability
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -138,8 +129,8 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Affection Level
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -151,8 +142,8 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Energy Level
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -166,8 +157,8 @@ const Card = (props) => {
                                                 </MDBCol>
 
 
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Child Friendly
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -179,8 +170,8 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Dog Friendly
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -192,8 +183,8 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Grooming
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -207,8 +198,8 @@ const Card = (props) => {
                                                 </MDBCol>
 
 
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Health Issues
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -220,8 +211,8 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Intelligence
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -234,8 +225,8 @@ const Card = (props) => {
                                                     </MDBCardText>
                                                 </MDBCol>
 
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Shedding Level
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -247,8 +238,8 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Social Needs
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -260,8 +251,8 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Stranger Friendly
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -273,8 +264,8 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="py-0 mb-md-3 mb-0 font-weight-bold">
                                                         Vocalisation
                                                     </MDBCardText>
                                                     <MDBCardText className="font-weight-light">
@@ -287,11 +278,11 @@ const Card = (props) => {
                                                     </MDBCardText>
                                                 </MDBCol>
 
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Hairless
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.hairless
                                                             ?
                                                             <MDBIcon icon="check" className="text-success" />
@@ -301,11 +292,11 @@ const Card = (props) => {
                                                     </MDBCardText>
                                                 </MDBCol>
 
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Rex
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.rex
                                                             ?
                                                             <MDBIcon icon="check" className="text-success py-1" />
@@ -315,11 +306,11 @@ const Card = (props) => {
                                                     </MDBCardText>
                                                 </MDBCol>
 
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Indoor
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.indoor
                                                             ?
                                                             <MDBIcon icon="check" className="text-success py-1" />
@@ -328,11 +319,11 @@ const Card = (props) => {
                                                     </MDBCardText>
                                                 </MDBCol>
 
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Hypoallergenic
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.hypoallergenic
                                                             ?
                                                             <MDBIcon icon="check" className="text-success py-1" />
@@ -341,11 +332,11 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Experimental
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.experimental
                                                             ?
                                                             <MDBIcon icon="check" className="text-success py-1" />
@@ -354,11 +345,11 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Natural
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.natural
                                                             ?
                                                             <MDBIcon icon="check" className="text-success py-1" />
@@ -368,11 +359,11 @@ const Card = (props) => {
                                                     </MDBCardText>
                                                 </MDBCol>
 
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Rare
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.rare
                                                             ?
                                                             <MDBIcon icon="check" className="text-success py-1" />
@@ -381,11 +372,11 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Short Legs
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.short_legs
                                                             ?
                                                             <MDBIcon icon="check" className="text-success py-1" />
@@ -394,11 +385,11 @@ const Card = (props) => {
                                                         }
                                                     </MDBCardText>
                                                 </MDBCol>
-                                                <MDBCol size="4" className="py-3">
-                                                    <MDBCardText className="py-3 block-example border-top border-gray font-weight-bold">
+                                                <MDBCol className="col-md-4 col-6 block-example border-bottom border-gray py-md-4 py-3">
+                                                    <MDBCardText className="font-weight-bold mb-md-3 mb-2">
                                                         Suppressed Tail
                                                     </MDBCardText>
-                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-4 m-auto rounded-circle">
+                                                    <MDBCardText className="font-weight-light bg-light col-md-1 col-3 m-auto rounded-circle">
                                                         {e.suppressed_tail
                                                             ?
                                                             <MDBIcon icon="check" className="text-success py-1" />
@@ -411,7 +402,7 @@ const Card = (props) => {
 
 
                                             <MDBRow className="justify-content-center mt-4 mb-3">
-                                                <MDBCol size="2">
+                                                <MDBCol className="col-md-2 col-5">
                                                     <MDBBtn outline target="_blank" color="light" href={e.wikipedia_url}>Read More</MDBBtn>
                                                 </MDBCol>
                                             </MDBRow>

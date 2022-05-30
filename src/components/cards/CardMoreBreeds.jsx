@@ -17,7 +17,7 @@ const CardMoreBreeds = (props) => {
 
     return (
         <MDBContainer className="py-lg-5">
-            <MDBRow>
+            <MDBRow className="justify-content-center">
                 {
                     props.moreCatsList != 0
                         ?

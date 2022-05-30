@@ -12,14 +12,15 @@ export default function Header() {
             <ReactPlayer
                 url={catVid}
                 width='100%'
-                height='850px'
+                // height={`${window.innerHeight}px`}
+                height="auto"
                 controls={false}
                 muted
                 playing
                 loop
             />
             <div className='mask' >
-                <div className='d-flex justify-content-center align-items-center h-50'>
+                <div className='d-flex justify-content-center align-items-center h-75'>
                     <div className='text-white'>
                         <MDBCardTitle className='titleH text-center my-md-5 my-4 display-1'>The Cats</MDBCardTitle>
                         <h3 className='titleH display-7'>List of Cat Breeds</h3>
