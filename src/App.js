@@ -24,6 +24,7 @@ function App() {
   const [moreCatsList, setMoreCatsList] = useState([])
   const [totalPage, setTotalPage] = useState([])
 
+
   useEffect(() => {
     (async () => {
       try {
@@ -39,6 +40,8 @@ function App() {
       }
     })();
   }, [])
+
+  // console.log(catsList);
 
   return (
     <BrowserRouter >
