@@ -20,7 +20,7 @@ export const Footer = () => {
 
             <div className="text-center p-3 bg-dark" >
 
-                <a className="text-blue" target="_blank" href="https://github.com/amirhatam/loisir"> Source Code</a>
+                <a className="text-blue" target="_blank" href="https://github.com/amirhatam/cat-fact"> Source Code</a>
             </div>
             <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                 © Mai 2022 :
