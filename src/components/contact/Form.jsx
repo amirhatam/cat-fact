@@ -7,7 +7,7 @@ export default function Form() {
             <MDBCard>
                 <MDBCardHeader className="form-header text-center bg-info rounded">
                     <h3 className="my-3 text-white">
-                        Contactez-moi <MDBIcon fab icon="telegram-plane" />
+                        Contact me <MDBIcon fab icon="telegram-plane" />
                     </h3>
                 </MDBCardHeader>
                 <MDBCardBody className="mb-lg-3 px-sm-4 px-0" >

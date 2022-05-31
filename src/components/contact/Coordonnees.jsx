@@ -7,9 +7,9 @@ import CodeWarsLogo from "../../assets/images/codewars.svg"
 export default function Coordonnees() {
     return (
         <MDBCol className="col-lg-5 col-10 mt-lg-0">
-            <MDBRow>
+            {/* <MDBRow>
                 <h4 className="h4-fs text-center font-weight-light mb-md-3 ">Coordonnées</h4>
-            </MDBRow>
+            </MDBRow> */}
 
             <MDBRow className="my-3">
                 <MDBCol size='2' className="align-self-center pr-0">
