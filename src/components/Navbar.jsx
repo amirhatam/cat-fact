@@ -39,9 +39,6 @@ export default function NavbarPage() {
               <MDBNavbarLink href='/more-breeds'>More Breeds</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>Features</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
               <MDBNavbarLink href='/contact'>Contact</MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>

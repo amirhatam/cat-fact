@@ -7,7 +7,6 @@ import Home from './Views/HomePage';
 import NavbarPage from './components/Navbar';
 import { Footer } from './components/Footer';
 import ContactPage from './Views/ContactPage';
-// import { CatFact } from './utils/CatFact';
 import { randomColor } from './utils/BoxColor';
 import { ListOfBreeds } from './utils/ListOfBreeds';
 import MoreBreeds from './Views/MoreBreeds';
@@ -28,20 +27,14 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-
         const getData = ListOfBreeds({ setCatsList, setData, setTotalPage, setMoreCatsList })
-
-        // const getFact = CatFact({ setFact })
-
         const getColor = randomColor({ setBoxColor })
-
       } catch (error) {
         console.log(error)
       }
     })();
   }, [])
 
-  // console.log(catsList);
 
   return (
     <BrowserRouter >
@@ -56,7 +49,6 @@ function App() {
             boxColor={boxColor}
           />} />
 
-
         <Route path="/more-breeds" exact element={
           <MoreBreeds
             fact={fact}
@@ -69,8 +61,6 @@ function App() {
           />
         } />
         <Route path="/contact" exact element={<ContactPage />} />
-
-
       </Routes>
       <Footer />
     </BrowserRouter>
