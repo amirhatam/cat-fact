@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactPaginate from 'react-paginate';
 import axios from 'axios'
+import { ListOfBreeds } from '../../utils/ListOfBreeds';
 
 export default function Paginate(props) {
 
@@ -9,11 +10,49 @@ export default function Paginate(props) {
             let catsData = []
             // const response = await axios.get(`https://catfact.ninja/breeds?page=${currentPage}`)
             const response = await axios.get(`https://api.thecatapi.com/v1/breeds?limit=10&page=${currentPage}`)
-            // console.log(currentPage);
+            const dataCatApi = response.data
+
+            let newCatList = []
             if (response.status === 200) {
-                // console.log("=>", response.data);
-                props.setCatsList(response.data)
+
+                // props.setCatsList(response.data)
+                dataCatApi.map(e => {
+                    newCatList.push({
+                        adaptability: e.adaptability,
+                        affection_level: e.affection_level,
+                        child_friendly: e.child_friendly,
+                        description: e.description,
+                        dog_friendly: e.dog_friendly,
+                        energy_level: e.energy_level,
+                        experimental: e.experimental,
+                        grooming: e.grooming,
+                        hairless: e.hairless,
+                        health_issues: e.health_issues,
+                        hypoallergenic: e.hypoallergenic,
+                        image: e.image.url,
+                        indoor: e.indoor,
+                        intelligence: e.intelligence,
+                        lap: e.lap,
+                        life_span: e.life_span,
+                        name: e.name,
+                        natural: e.natural,
+                        origin: e.origin,
+                        rare: e.rare,
+                        rex: e.rex,
+                        shedding_level: e.shedding_level,
+                        short_legs: e.short_legs,
+                        social_needs: e.social_needs,
+                        stranger_friendly: e.stranger_friendly,
+                        suppressed_tail: e.suppressed_tail,
+                        temperament: e.temperament,
+                        vocalisation: e.vocalisation,
+                        temperament: e.temperament,
+                        wikipedia_url: e.wikipedia_url,
+                    })
+                })
             }
+
+            props.setCatsList(newCatList)
         } catch (err) {
             console.error(err);
         }
