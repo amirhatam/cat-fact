@@ -409,7 +409,6 @@ export default function Tabs(props) {
 
                 </MDBTabsContent>
 
-
                 <MDBRow className="justify-content-center mt-4 mb-3">
                     <MDBCol className="col-md-3 col-5">
                         <MDBBtn outline target="_blank" color="light" href={cat.wikipedia_url}>Read More</MDBBtn>
