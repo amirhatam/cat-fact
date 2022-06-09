@@ -15,6 +15,8 @@ export default function HomePage(props) {
                 fact={props.fact}
                 setFact={props.setFact}
                 boxColor={props.boxColor}
+                basicActive={props.basicActive}
+                setBasicActive={props.setBasicActive}
             />
 
         </div>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import {
+    MDBBtn,
     MDBCard,
     MDBContainer,
     MDBRow,
     MDBTooltip,
-
 } from 'mdb-react-ui-kit'
 import { CatFact } from "../../utils/CatFact";
 import '../../assets/styles/CardStyles.css'
@@ -25,7 +25,6 @@ const Card = (props) => {
         props.setFact([])
     }
 
-    // console.log("=>", props.catsList);
 
     return (
         <MDBContainer className="py-lg-5">
@@ -36,13 +35,15 @@ const Card = (props) => {
                         props.catsList.map((e, i) => {
                             return (
                                 // <MDBCardGroup key={i} className='col-md-6 col-11 my-5'>
+
                                 <div key={i} className='col-md-6 col-11 my-5'>
+
                                     <MDBCard background={props.boxColor[i]}>
                                         <MDBRow style={{ cursor: "pointer" }}>
 
                                             <div className='col-12 bg-image hover-overlay'>
                                                 {
-                                                    e.image && e.image !== undefined
+                                                    e.image && e.image.url !== undefined
                                                         ?
                                                         <div className="text-center">
                                                             <MDBTooltip
@@ -58,7 +59,7 @@ const Card = (props) => {
                                                                 }
                                                             >
                                                                 <div
-                                                                    style={{ backgroundImage: `url(${e.image})`, backgroundPosition: 'top', height: '80vmin' }}
+                                                                    style={{ backgroundImage: `url(${e.image.url})`, backgroundPosition: 'top', height: '80vmin' }}
                                                                     className='p-5 text-center bg-image'
                                                                 ></div>
                                                                 {/* <MDBCardImage src={e.image.url} fluid alt='...' style={{ height: '60vmin' }} /> */}
@@ -80,7 +81,7 @@ const Card = (props) => {
                                                                 }
                                                             >
                                                                 <div
-                                                                    style={{ backgroundImage: `url(${NotFound})`, height: '70vmin' }}
+                                                                    style={{ backgroundImage: `url(${NotFound})`, height: '80vmin' }}
                                                                     className='p-5 text-center bg-image'
                                                                 ></div>
                                                                 {/* <MDBCardImage src={NotFound} style={{ height: '60vmin' }} fluid alt='...' /> */}
@@ -91,7 +92,6 @@ const Card = (props) => {
                                             </div>
                                         </MDBRow>
 
-
                                         {
                                             tab.map((elem, index) => {
                                                 return <Tabs
@@ -99,6 +99,18 @@ const Card = (props) => {
                                                     key={index}
                                                 />
                                             })
+                                        }
+
+                                        {
+                                            e.wikipedia_url
+                                                ?
+                                                <div className="text-center my-md-4 mb-3">
+                                                    <MDBBtn outline target="_blank" color="light" href={e.wikipedia_url}>Read More</MDBBtn>
+                                                </div>
+                                                :
+                                                <div className="text-center my-md-4 mb-3">
+                                                    <MDBBtn outline target="_blank" color="light" href={e.wikipedia_url}>Not Found !</MDBBtn>
+                                                </div>
                                         }
 
                                     </MDBCard>
